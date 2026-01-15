@@ -17,7 +17,7 @@ function mostrarCategoria(id, botao) {
 }
 
 function pedirWhatsApp(produto, preco) {
-  const numero = "5599999999999"; // TROQUE PELO SEU NÚMERO
+  const numero = "5553991433653"; // numero de celular
   const mensagem =
     `Olá! Quero fazer um pedido:\n\n` +
     `• ${produto}\n` +
@@ -28,3 +28,4 @@ function pedirWhatsApp(produto, preco) {
 
   window.open(url, '_blank');
 }
+
