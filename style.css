@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+/* TOPO */
+.topo {
+  background: #ffffff;
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.topo h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.topo p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* CATEGORIAS */
+.categorias {
+  display: flex;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.categorias button {
+  flex: 1;
+  padding: 12px;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.categorias button.ativo {
+  color: #d35400;
+  border-bottom: 3px solid #d35400;
+}
+
+/* LISTAS */
+.lista {
+  display: none;
+}
+
+.lista.ativo {
+  display: block;
+}
+
+/* PRODUTO */
+.produto {
+  display: flex;
+  background: #ffffff;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.produto img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.info {
+  margin-left: 10px;
+  flex: 1;
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.info p {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.info strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.info button {
+  margin-top: 6px;
+  padding: 6px 12px;
+  background: #27ae60;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* EM BREVE */
+.em-breve {
+  padding: 20px;
+  text-align: center;
+  color: #777;
+}
