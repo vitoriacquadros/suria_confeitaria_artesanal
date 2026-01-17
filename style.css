@@ -247,15 +247,15 @@ body {
   font-size: 12px;
   font-weight: 600;
 }
-
-/* LOGO */
+/*logo*/
 .logo {
   width: 90px;
   height: 90px;
   object-fit: contain;
   margin: 10px auto;
-  border: 2px;
 
+  border-radius: 50%;
+  overflow: hidden;   /* ESSENCIAL */
 }
 
 /* TÍTULO */
