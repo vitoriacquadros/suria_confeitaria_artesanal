@@ -6,24 +6,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+<a
+  href="https://wa.me/55SEUNUMEROAQUI?text=Olá! Vim pelo cardápio e gostaria de fazer um pedido 🍰"
+  class="whatsapp-float"
+  target="_blank"
+>
+  💬
+</a>
 
 <body>
+<header class="hero">
+  <div class="hero-overlay"></div>
 
-  <section class="apresentacao">
+  <div class="hero-content">
 
-    <div class="apresentacao-conteudo">
-      <h1>Sûria</h1>
-      <p class="slogan">
-        Confeitaria artesanal feita com carinho,<br>
-        sabor e ingredientes selecionados.
-      </p>
-
-      <a href="cardapio.html" class="btn-cardapio">
-        Ver Cardápio 🍰
-      </a>
+    <div class="status fechado">
+      ⏰ Fechado · Pedir para depois
     </div>
 
-  </section>
+    <!-- Se não tiver logo ainda, pode usar imagem de doce -->
+    <img src="logo.png" alt="Sûria Confeitaria" class="logo">
 
+    <h1>Sûria Confeitaria Artesanal</h1>
+
+    <div class="infos">
+      <span>📍 Brasília de Minas - MG</span>
+      <span>🚚 Entrega estimada: 30–90 min</span>
+    </div>
+
+  </div>
+</header>
+
+  <nav class="categorias">
+    <button class="ativo" onclick="mostrarCategoria('copos', this)">Copo da Felicidade</button>
+    <button onclick="mostrarCategoria('salgados', this)">Salgados</button>
+  </nav>
+
+  <main>
+
+    <!-- CATEGORIA COPOS -->
+    <section id="copos" class="lista ativo">
+
+      <div class="produto">
+        <img src="https://via.placeholder.com/80" alt="Copo Sedução">
+        <div class="info">
+          <h3>Copo Felicidade – Doce Sedução (±220g)</h3>
+          <p>Brigadeiro de ninho, mousse leve e morangos.</p>
+          <strong>R$ 20,00</strong>
+          <button onclick="pedirWhatsApp('Copo Sedução', 20)">Pedir</button>
+        </div>
+      </div>
+
+      <div class="produto">
+        <img src="https://via.placeholder.com/80" alt="Marabrownie">
+        <div class="info">
+          <h3>Copo Felicidade – Marabrownie (±220g)</h3>
+          <p>Brigadeiro de maracujá com pedaços de brownie.</p>
+          <strong>R$ 20,00</strong>
+          <button onclick="pedirWhatsApp('Copo Marabrownie', 20)">Pedir</button>
+        </div>
+      </div>
+
+      <div class="produto">
+        <img src="https://via.placeholder.com/80" alt="Ouro Branco">
+        <div class="info">
+          <h3>Copo Felicidade – Ouro Branco (±220g)</h3>
+          <p>Brigadeiro cremoso com chocolate Ouro Branco.</p>
+          <strong>R$ 23,00</strong>
+          <button onclick="pedirWhatsApp('Copo Ouro Branco', 23)">Pedir</button>
+        </div>
+      </div>
+
+      <div>
+        
+      </div>
+
+    </section>
+
+    <!-- CATEGORIA SALGADOS -->
+    <section id="salgados" class="lista">
+      <p class="em-breve">Em breve...</p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
