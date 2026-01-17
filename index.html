@@ -9,64 +9,21 @@
 
 <body>
 
-  <header class="topo">
-    <h1>Sûria</h1>
-    <p>Doces e Salgados</p>
-  </header>
+  <section class="apresentacao">
 
-  <nav class="categorias">
-    <button class="ativo" onclick="mostrarCategoria('copos', this)">Copo da Felicidade</button>
-    <button onclick="mostrarCategoria('salgados', this)">Salgados</button>
-  </nav>
+    <div class="apresentacao-conteudo">
+      <h1>Sûria</h1>
+      <p class="slogan">
+        Confeitaria artesanal feita com carinho,<br>
+        sabor e ingredientes selecionados.
+      </p>
 
-  <main>
+      <a href="cardapio.html" class="btn-cardapio">
+        Ver Cardápio 🍰
+      </a>
+    </div>
 
-    <!-- CATEGORIA COPOS -->
-    <section id="copos" class="lista ativo">
+  </section>
 
-      <div class="produto">
-        <img src="https://via.placeholder.com/80" alt="Copo Sedução">
-        <div class="info">
-          <h3>Copo Felicidade – Doce Sedução (±220g)</h3>
-          <p>Brigadeiro de ninho, mousse leve e morangos.</p>
-          <strong>R$ 20,00</strong>
-          <button onclick="pedirWhatsApp('Copo Sedução', 20)">Pedir</button>
-        </div>
-      </div>
-
-      <div class="produto">
-        <img src="https://via.placeholder.com/80" alt="Marabrownie">
-        <div class="info">
-          <h3>Copo Felicidade – Marabrownie (±220g)</h3>
-          <p>Brigadeiro de maracujá com pedaços de brownie.</p>
-          <strong>R$ 20,00</strong>
-          <button onclick="pedirWhatsApp('Copo Marabrownie', 20)">Pedir</button>
-        </div>
-      </div>
-
-      <div class="produto">
-        <img src="https://via.placeholder.com/80" alt="Ouro Branco">
-        <div class="info">
-          <h3>Copo Felicidade – Ouro Branco (±220g)</h3>
-          <p>Brigadeiro cremoso com chocolate Ouro Branco.</p>
-          <strong>R$ 23,00</strong>
-          <button onclick="pedirWhatsApp('Copo Ouro Branco', 23)">Pedir</button>
-        </div>
-      </div>
-
-      <div>
-        
-      </div>
-
-    </section>
-
-    <!-- CATEGORIA SALGADOS -->
-    <section id="salgados" class="lista">
-      <p class="em-breve">Em breve...</p>
-    </section>
-
-  </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
