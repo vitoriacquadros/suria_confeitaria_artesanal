@@ -202,14 +202,13 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 10px 16px rgba(0,0,0,0.18);
 }
-
 /* =====================
    HERO / TOPO PRINCIPAL
 ===================== */
 .hero {
   position: relative;
   height: 320px;
-  background-image: url('fundo-doce.jpg');
+  background-image: url('fundo-doce.jpg'); /* imagem de fundo */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -221,13 +220,11 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255, 248, 243, 0.9);
-  z-index: 1; /* ← ADICIONA ISSO */
+  background: rgba(255, 248, 243, 0.9); /* mesma base do body */
 }
 
 .hero-content {
   position: relative;
-  z-index: 2; /* ← ADICIONA ISSO */
   background: #ffffff;
   padding: 22px 18px;
   border-radius: 20px;
@@ -236,7 +233,6 @@ body {
   max-width: 360px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
-
 
 /* STATUS */
 .status {
@@ -251,21 +247,14 @@ body {
   font-size: 12px;
   font-weight: 600;
 }
-/*logo*/
+
+/* LOGO */
 .logo {
   width: 90px;
   height: 90px;
   object-fit: contain;
-
-  border-radius: 50%;
-  overflow: hidden;
-
-  display: block;
   margin: 10px auto;
-
-  background: #fff;
 }
-
 
 /* TÍTULO */
 .hero-content h1 {
