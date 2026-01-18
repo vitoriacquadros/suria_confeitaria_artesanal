@@ -38,7 +38,7 @@
 </header>
 
   <nav class="categorias">
-    <button class="ativo" onclick="mostrarCategoria('Doces', this)">Coxinha de morango</button>
+    <button class="ativo" onclick="mostrarCategoria('Doces', this)">Doces</button>
     <button onclick="mostrarCategoria('salgados', this)">Salgados</button>
   </nav>
 
@@ -85,7 +85,27 @@
 
     <!-- CATEGORIA SALGADOS -->
     <section id="salgados" class="lista">
-      <p class="em-breve">Em breve...</p>
+       <div class="produto">
+        <img src="https://via.placeholder.com/80" alt="Copo Sedução">
+        <div class="info">
+          <h3>Copo Felicidade – Doce Sedução (±220g)</h3>
+          <p>Brigadeiro de ninho, mousse leve e morangos.</p>
+          <strong>R$ 20,00</strong>
+          <button onclick="pedirWhatsApp('Copo Sedução', 20)">Pedir</button>
+        </div>
+      </div>
+
+      <div class="produto">
+        <img src="https://via.placeholder.com/80" alt="Marabrownie">
+        <div class="info">
+          <h3>Copo Felicidade – Marabrownie (±220g)</h3>
+          <p>Brigadeiro de maracujá com pedaços de brownie.</p>
+          <strong>R$ 20,00</strong>
+          <button onclick="pedirWhatsApp('Copo Marabrownie', 20)">Pedir</button>
+        </div>
+      </div>
+
+
     </section>
 
   </main>
