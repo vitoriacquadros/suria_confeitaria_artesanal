@@ -28,4 +28,3 @@ function pedirWhatsApp(produto, preco) {
 
   window.open(url, '_blank');
 }
-
