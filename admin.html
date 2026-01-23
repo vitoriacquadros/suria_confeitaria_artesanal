@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin – Sûria</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Painel Administrativo</h2>
+
+  <section>
+    <h3>Adicionar Produto</h3>
+
+    <input type="text" id="nome" placeholder="Nome do produto"><br><br>
+    <input type="number" id="preco" placeholder="Preço"><br><br>
+    <input type="text" id="categoria" placeholder="Categoria"><br><br>
+    <textarea id="descricao" placeholder="Descrição"></textarea><br><br>
+
+    <button onclick="adicionarProduto()">Salvar produto</button>
+  </section>
+
+  <p id="msg"></p>
+
+  <script src="admin.js"></script>
+</body>
+</html>

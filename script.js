@@ -28,3 +28,21 @@ function pedirWhatsApp(produto, preco) {
 
   window.open(url, '_blank');
 }
+
+fetch("https://backend-ppvb.onrender.com")
+  .then(res => res.json())
+  .then(data => {
+    const statusDiv = document.getElementById("status");
+
+    if (data.aberto) {
+      statusDiv.textContent = "🟢 Aberto agora";
+      statusDiv.className = "status aberto";
+    } else {
+      statusDiv.textContent = "🔴 Fechado no momento";
+      statusDiv.className = "status fechado";
+    }
+  })
+  .catch(() => {
+    const statusDiv = document.getElementById("status");
+    statusDiv.textContent = "⚠️ Erro ao verificar status";
+  });
