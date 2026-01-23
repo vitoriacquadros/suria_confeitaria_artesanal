@@ -76,3 +76,16 @@ function renderizarProdutos(produtos) {
 }
 
 carregarProdutos();
+
+async function carregarProdutos() {
+  try {
+    const res = await fetch(`${API_URL}/produtos`);
+    const produtos = await res.json();
+
+    console.log("PRODUTOS RECEBIDOS:", produtos);
+
+    renderizarProdutos(produtos);
+  } catch (err) {
+    console.error("Erro ao carregar produtos:", err);
+  }
+}
