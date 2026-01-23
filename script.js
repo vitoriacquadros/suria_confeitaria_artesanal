@@ -1,61 +1,78 @@
+const API_URL = "https://backend-ppvb.onrender.com";
+
+/* =========================
+   CATEGORIAS
+========================= */
 function mostrarCategoria(id, botao) {
-  // Esconde todas as listas
-  document.querySelectorAll('.lista').forEach(sec => {
-    sec.classList.remove('ativo');
+  document.querySelectorAll(".lista").forEach(sec => {
+    sec.classList.remove("ativo");
   });
 
-  // Mostra a categoria clicada
-  document.getElementById(id).classList.add('ativo');
+  document.getElementById(id).classList.add("ativo");
 
-  // Remove destaque de todos os botões
-  document.querySelectorAll('.categorias button').forEach(btn => {
-    btn.classList.remove('ativo');
+  document.querySelectorAll(".categorias button").forEach(btn => {
+    btn.classList.remove("ativo");
   });
 
-  // Ativa o botão clicado
-  botao.classList.add('ativo');
+  botao.classList.add("ativo");
 }
 
+/* =========================
+   WHATSAPP
+========================= */
 function pedirWhatsApp(produto, preco) {
-  const numero = "5553991433653"; // numero de celular
+  const numero = "5553991433653";
   const mensagem =
     `Olá! Quero fazer um pedido:\n\n` +
     `• ${produto}\n` +
-    `Valor: R$ ${preco},00`;
+    `Valor: R$ ${Number(preco).toFixed(2)}`;
 
-  const url =
-    `https://wa.me/${5553991433653}?text=${encodeURIComponent(mensagem)}`;
-
-  window.open(url, '_blank');
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, "_blank");
 }
 
-fetch("https://backend-ppvb.onrender.com/produtos", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    nome,
-    preco,
-    categoria,
-    descricao
-  })
-})
+/* =========================
+   CARREGAR PRODUTOS
+========================= */
+async function carregarProdutos() {
+  try {
+    const res = await fetch(`${API_URL}/produtos`);
+    const produtos = await res.json();
+    renderizarProdutos(produtos);
+  } catch (err) {
+    console.error("Erro ao carregar produtos:", err);
+  }
+}
 
-fetch("https://backend-ppvb.onrender.com/produtos")
-  .then(res => res.json())
-  .then(data => {
-    const statusDiv = document.getElementById("status");
+function renderizarProdutos(produtos) {
+  const docesSection = document.getElementById("Doces");
+  const salgadosSection = document.getElementById("salgados");
 
-    if (data.aberto) {
-      statusDiv.textContent = "🟢 Aberto agora";
-      statusDiv.className = "status aberto";
-    } else {
-      statusDiv.textContent = "🔴 Fechado no momento";
-      statusDiv.className = "status fechado";
+  docesSection.innerHTML = "";
+  salgadosSection.innerHTML = "";
+
+  produtos.forEach(produto => {
+    const card = document.createElement("div");
+    card.className = "produto";
+
+    card.innerHTML = `
+      <img src="${produto.foto || 'fotofakedoce.jpeg'}" alt="${produto.nome}">
+      <div class="info">
+        <h3>${produto.nome}</h3>
+        <p>${produto.descricao || ""}</p>
+        <strong>R$ ${Number(produto.preco).toFixed(2)}</strong>
+        <button onclick="pedirWhatsApp('${produto.nome}', ${produto.preco})">
+          Pedir
+        </button>
+      </div>
+    `;
+
+    if (produto.categoria?.toLowerCase() === "doces") {
+      docesSection.appendChild(card);
+    } else if (produto.categoria?.toLowerCase() === "salgados") {
+      salgadosSection.appendChild(card);
     }
-  })
-  .catch(() => {
-    const statusDiv = document.getElementById("status");
-    statusDiv.textContent = "⚠️ Erro ao verificar status";
   });
+}
+
+carregarProdutos();

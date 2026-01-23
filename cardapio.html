@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+
+<body>
+
 <a
   href="https://wa.me/5553991433653?text=Olá! Vim pelo cardápio e gostaria de fazer um pedido 🍰"
   class="whatsapp-float"
@@ -14,102 +17,42 @@
   💬
 </a>
 
-<body>
 <header class="hero">
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-
     <div class="status fechado">
       ⏰ Fechado · Pedir para depois
     </div>
 
-    <!-- Se não tiver logo ainda, pode usar imagem de doce -->
-    <img src= "Sûria.png" alt="Sûria Confeitaria" class="logo">
+    <img src="Sûria.png" alt="Sûria Confeitaria" class="logo">
 
     <h1>Sûria Confeitaria Artesanal</h1>
 
     <div class="infos">
       <span>📍 Rio Grande - RS</span>
-      <span>🚚 Delivery </span>
+      <span>🚚 Delivery</span>
     </div>
-
   </div>
 </header>
 
-  <nav class="categorias">
-    <button class="ativo" onclick="mostrarCategoria('Doces', this)">Doces</button>
-    <button onclick="mostrarCategoria('salgados', this)">Salgados</button>
-  </nav>
+<nav class="categorias">
+  <button class="ativo" onclick="mostrarCategoria('Doces', this)">Doces</button>
+  <button onclick="mostrarCategoria('salgados', this)">Salgados</button>
+</nav>
 
-  <main>
+<main>
+  <!-- DOCES -->
+  <section id="Doces" class="lista ativo">
+    <!-- produtos vêm do backend -->
+  </section>
 
-    <!-- CATEGORIA Doces -->
-    <section id="Doces" class="lista ativo">
+  <!-- SALGADOS -->
+  <section id="salgados" class="lista">
+    <!-- produtos vêm do backend -->
+  </section>
+</main>
 
-      <div class="produto">
-        <img src="fotofakedoce.jpeg" alt="Copo Sedução">
-        <div class="info">
-          <h3>Copo Felicidade – Doce Sedução (±220g)</h3>
-          <p>Brigadeiro de ninho, mousse leve e morangos.</p>
-          <strong>R$ 20,00</strong>
-          <button onclick="pedirWhatsApp('Copo Sedução', 20)">Pedir</button>
-        </div>
-      </div>
-
-      <div class="produto">
-        <img src="fotofakedoce.jpeg" alt="Marabrownie">
-        <div class="info">
-          <h3>Copo Felicidade – Marabrownie (±220g)</h3>
-          <p>Brigadeiro de maracujá com pedaços de brownie.</p>
-          <strong>R$ 20,00</strong>
-          <button onclick="pedirWhatsApp('Copo Marabrownie', 20)">Pedir</button>
-        </div>
-      </div>
-
-      <div class="produto">
-        <img src="fotofakedoce.jpeg" alt="Ouro Branco">
-        <div class="info">
-          <h3>Copo Felicidade – Ouro Branco (±220g)</h3>
-          <p>Brigadeiro cremoso com chocolate Ouro Branco.</p>
-          <strong>R$ 23,00</strong>
-          <button onclick="pedirWhatsApp('Copo Ouro Branco', 23)">Pedir</button>
-        </div>
-      </div>
-
-      <div>
-        
-      </div>
-
-    </section>
-
-    <!-- CATEGORIA SALGADOS -->
-    <section id="salgados" class="lista">
-       <div class="produto">
-        <img src="fotofakedoce.jpeg" alt="Copo Sedução">
-        <div class="info">
-          <h3>Copo Felicidade – Doce Sedução (±220g)</h3>
-          <p>Brigadeiro de ninho, mousse leve e morangos.</p>
-          <strong>R$ 20,00</strong>
-          <button onclick="pedirWhatsApp('Copo Sedução', 20)">Pedir</button>
-        </div>
-      </div>
-
-      <div class="produto">
-        <img src="fotofakedoce.jpeg" alt="Marabrownie">
-        <div class="info">
-          <h3>Copo Felicidade – Marabrownie (±220g)</h3>
-          <p>Brigadeiro de maracujá com pedaços de brownie.</p>
-          <strong>R$ 20,00</strong>
-          <button onclick="pedirWhatsApp('Copo Marabrownie', 20)">Pedir</button>
-        </div>
-      </div>
-
-
-    </section>
-
-  </main>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
