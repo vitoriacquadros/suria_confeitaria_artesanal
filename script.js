@@ -1,3 +1,5 @@
+console.log("SCRIPT CARREGADO");
+
 const API_URL = "https://backend-ppvb.onrender.com";
 
 /* =========================
@@ -89,3 +91,16 @@ async function carregarProdutos() {
     console.error("Erro ao carregar produtos:", err);
   }
 }
+
+fetch(`${API_URL}/produtos`)
+  .then(res => {
+    console.log("RESPOSTA RECEBIDA");
+    return res.json();
+  })
+  .then(data => {
+    console.log("DADOS:", data);
+    renderizarProdutos(data);
+  })
+  .catch(err => {
+    console.error("ERRO NO FETCH:", err);
+  });
