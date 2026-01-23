@@ -1,26 +1,49 @@
+/* =========================
+   ADICIONAR PRODUTO (ADMIN)
+========================= */
 function adicionarProduto() {
-  const produto = {
-    nome: document.getElementById("nome").value,
-    preco: document.getElementById("preco").value,
-    categoria: document.getElementById("categoria").value,
-    descricao: document.getElementById("descricao").value
-  };
+  const nome = document.getElementById("nome").value.trim();
+  const preco = Number(document.getElementById("preco").value);
+  const categoria = document.getElementById("categoria").value.trim();
+  const descricao = document.getElementById("descricao").value.trim();
 
-  fetch("https://suria-backend.onrender.com/produtos", {
+  if (!nome || !preco || !categoria) {
+    alert("Preencha nome, preço e categoria");
+    return;
+  }
+
+  fetch("https://backend-ppvb.onrender.com/produtos", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(produto)
+    body: JSON.stringify({
+      nome,
+      preco,
+      categoria,
+      descricao
+    })
   })
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("msg").textContent =
-      "Produto adicionado com sucesso!";
-  })
-  .catch(err => {
-    console.error(err);
-    document.getElementById("msg").textContent =
-      "Erro ao adicionar produto";
-  });
+    .then(res => {
+      if (!res.ok) throw new Error("Erro no backend");
+      return res.json();
+    })
+    .then(() => {
+      alert("✅ Produto adicionado com sucesso");
+      limparFormulario();
+    })
+    .catch(err => {
+      console.error(err);
+      alert("Erro ao adicionar produto");
+    });
+}
+
+/* =========================
+   LIMPAR FORMULÁRIO
+========================= */
+function limparFormulario() {
+  document.getElementById("nome").value = "";
+  document.getElementById("preco").value = "";
+  document.getElementById("categoria").value = "";
+  document.getElementById("descricao").value = "";
 }

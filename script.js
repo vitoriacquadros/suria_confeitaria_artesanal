@@ -29,7 +29,20 @@ function pedirWhatsApp(produto, preco) {
   window.open(url, '_blank');
 }
 
-fetch("https://backend-ppvb.onrender.com")
+fetch("https://backend-ppvb.onrender.com/produtos", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    nome,
+    preco,
+    categoria,
+    descricao
+  })
+})
+
+fetch("https://backend-ppvb.onrender.com/produtos")
   .then(res => res.json())
   .then(data => {
     const statusDiv = document.getElementById("status");
