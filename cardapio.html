@@ -1,36 +1,115 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Cardápio</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Sûria Confeitaria Artesanal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
+<a
+  href="https://wa.me/5553991433653?text=Olá! Vim pelo cardápio e gostaria de fazer um pedido 🍰"
+  class="whatsapp-float"
+  target="_blank"
+>
+  💬
+</a>
+
 <body>
+<header class="hero">
+  <div class="hero-overlay"></div>
 
-<h1>Cardápio</h1>
+  <div class="hero-content">
 
-<div class="categorias">
-  <button onclick="mostrarCategoria('lanches', this)">Lanches</button>
-  <button onclick="mostrarCategoria('bebidas', this)">Bebidas</button>
-</div>
+    <div class="status fechado">
+      ⏰ Fechado · Pedir para depois
+    </div>
 
-<section id="lanches" class="lista ativo">
-  <div class="produto">
-    <h3>X-Burguer</h3>
-    <p>R$ 18,00</p>
-    <button onclick="pedirWhatsApp('X-Burguer', 18)">Pedir</button>
+    <!-- Se não tiver logo ainda, pode usar imagem de doce -->
+    <img src= "Sûria.png" alt="Sûria Confeitaria" class="logo">
+
+    <h1>Sûria Confeitaria Artesanal</h1>
+
+    <div class="infos">
+      <span>📍 Rio Grande - RS</span>
+      <span>🚚 Delivery </span>
+    </div>
+
   </div>
-</section>
+</header>
 
-<section id="bebidas" class="lista">
-  <div class="produto">
-    <h3>Refrigerante</h3>
-    <p>R$ 6,00</p>
-    <button onclick="pedirWhatsApp('Refrigerante', 6)">Pedir</button>
-  </div>
-</section>
+  <nav class="categorias">
+    <button class="ativo" onclick="mostrarCategoria('Doces', this)">Doces</button>
+    <button onclick="mostrarCategoria('salgados', this)">Salgados</button>
+  </nav>
 
-<script src="js/firebase.js"></script>
-<script src="js/script.js"></script>
+  <main>
+
+    <!-- CATEGORIA Doces -->
+    <section id="Doces" class="lista ativo">
+
+      <div class="produto">
+        <img src="https://via.placeholder.com/80" alt="Copo Sedução">
+        <div class="info">
+          <h3>Copo Felicidade – Doce Sedução (±220g)</h3>
+          <p>Brigadeiro de ninho, mousse leve e morangos.</p>
+          <strong>R$ 20,00</strong>
+          <button onclick="pedirWhatsApp('Copo Sedução', 20)">Pedir</button>
+        </div>
+      </div>
+
+      <div class="produto">
+        <img src="https://via.placeholder.com/80" alt="Marabrownie">
+        <div class="info">
+          <h3>Copo Felicidade – Marabrownie (±220g)</h3>
+          <p>Brigadeiro de maracujá com pedaços de brownie.</p>
+          <strong>R$ 20,00</strong>
+          <button onclick="pedirWhatsApp('Copo Marabrownie', 20)">Pedir</button>
+        </div>
+      </div>
+
+      <div class="produto">
+        <img src="https://via.placeholder.com/80" alt="Ouro Branco">
+        <div class="info">
+          <h3>Copo Felicidade – Ouro Branco (±220g)</h3>
+          <p>Brigadeiro cremoso com chocolate Ouro Branco.</p>
+          <strong>R$ 23,00</strong>
+          <button onclick="pedirWhatsApp('Copo Ouro Branco', 23)">Pedir</button>
+        </div>
+      </div>
+
+      <div>
+        
+      </div>
+
+    </section>
+
+    <!-- CATEGORIA SALGADOS -->
+    <section id="salgados" class="lista">
+       <div class="produto">
+        <img src="https://via.placeholder.com/80" alt="Copo Sedução">
+        <div class="info">
+          <h3>Copo Felicidade – Doce Sedução (±220g)</h3>
+          <p>Brigadeiro de ninho, mousse leve e morangos.</p>
+          <strong>R$ 20,00</strong>
+          <button onclick="pedirWhatsApp('Copo Sedução', 20)">Pedir</button>
+        </div>
+      </div>
+
+      <div class="produto">
+        <img src="https://via.placeholder.com/80" alt="Marabrownie">
+        <div class="info">
+          <h3>Copo Felicidade – Marabrownie (±220g)</h3>
+          <p>Brigadeiro de maracujá com pedaços de brownie.</p>
+          <strong>R$ 20,00</strong>
+          <button onclick="pedirWhatsApp('Copo Marabrownie', 20)">Pedir</button>
+        </div>
+      </div>
+
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
