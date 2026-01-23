@@ -305,3 +305,26 @@ body {
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+
+.status {
+  margin: 16px 0;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.status.aberto {
+  background: #d4f5e2;
+  color: #1e7e34;
+}
+
+.status.fechado {
+  background: #f8d7da;
+  color: #842029;
+}
+
+.status.carregando {
+  background: #eee;
+  color: #555;
+}
