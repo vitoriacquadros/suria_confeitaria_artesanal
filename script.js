@@ -17,7 +17,7 @@ function pedirWhatsApp(produto, preco) {
   const mensagem =
     `Olá! Quero fazer um pedido:\n\n` +
     `• ${produto}\n` +
-    `Valor: R$ ${preco},00`;
+    `Valor: R$ ${preco}`;
 
   const url =
     `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
