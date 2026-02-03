@@ -22,23 +22,25 @@
 
   <div class="hero-content">
     <div class="status fechado">
-      ⏰ Fechado · Pedir para depois
+      ⏰ Aberto · Pedir para agora
     </div>
 
-    <img src="Sûria.png" alt="Sûria Confeitaria" class="logo">
+    <img src="imagens/Sûria.png"alt="Sûria Confeitaria" class="logo">
 
     <h1>Sûria Confeitaria Artesanal</h1>
 
     <div class="infos">
       <span>📍 Rio Grande - RS</span>
-      <span>🚚 Delivery e Ifood</span>
+      <span>🚚 Delivery e Encomendas</span>
     </div>
   </div>
 </header>
 
 <nav class="categorias">
   <button class="ativo" onclick="mostrarCategoria('Doces', this)">Doces</button>
-  <button onclick="mostrarCategoria('salgados', this)">Salgados</button>
+  <button onclick="mostrarCategoria('Salgados', this)">Salgados</button>
+  <button onclick="mostrarCategoria('Bebidas', this)">Bebidas</button>
+  <button onclick="mostrarCategoria('Combos & Encomendas', this)">Combos & Encomendas</button>
 </nav>
 
 <main>
@@ -47,20 +49,20 @@
   <section id="Doces" class="lista ativo">
 <!-- produto 1 -->
     <div class="produto">
-      <img src="mini_vulcao_cenoura.jpeg" alt="Copo Sedução">
+      <img src="imagens/mini_vulcao_cenoura.jpeg" alt="Mini vulcão de cenoura">
       <div class="info">
         <h3>Mini vulcão de cenoura (±220g)</h3>
-        <p>Transborda amor, carinho e muito recheio.</p>
+        <p>Mini bolo vulcão com massa macia de cenoura, cobertura generosa de brigadeiro ao leite e granulado crocante!</p>
         <strong>R$ 8,50</strong>
         <button onclick="pedirWhatsApp('Mini vulcão de cenoura', 8.50)">Pedir</button>
       </div>
     </div>
 <!-- produto 2 -->
     <div class="produto">
-      <img src="coxinha_morango_ao_leite.jpeg" alt="Marabrownie">
+      <img src="imagens/coxinha_morango_ao_leite.jpeg" alt="Coxinha de morango ao leite">
       <div class="info">
         <h3>Coxinha de morango ao leite (±80g)</h3>
-        <p>completar....</p>
+        <p>Coxinha de morango com brigadeiro ao leite cremoso e finalizada com granulado de chocolate! Clássica e irresistível!</p>
         <strong>R$ 9,00</strong>
         <button onclick="pedirWhatsApp('Coxinha de morango ao leite', 9.00)">Pedir</button>
       </div>
@@ -69,10 +71,10 @@
 
     <!-- produto 3 -->
     <div class="produto">
-      <img src="coxinha_de_ninho.jpeg" alt="Marabrownie">
+      <img src="imagens/coxinha_de_ninho.jpeg" alt="Coxinha de Ninho">
       <div class="info">
         <h3>Coxinha de morango e Ninho (±80g)</h3>
-        <p>completar.</p>
+        <p>Coxinha de morango com brigadeiro de Ninho cremoso e finalizada com Ninho!</p>
         <strong>R$ 9,00</strong>
         <button onclick="pedirWhatsApp('Coxinha de morango e Ninho', 9.00)">Pedir</button>
       </div>
@@ -80,21 +82,21 @@
 
  <!-- produto 4 -->
    <div class="produto">
-      <img src="bombom_pote_morango.jpeg" alt="Ouro Branco">
+      <img src="imagens/bombom_pote_morango.jpeg" alt="Bombom no pote de morango">
       <div class="info">
-        <h3>Bombom no pote de morango</h3>
-        <p>Completar....</p>
+        <h3>Bombom de morango no pote</h3>
+        <p>Morangos frescos, brigadeiro de ninho e ganache de chocolate ao leite.</p>
         <strong>R$ 10,00</strong>
-        <button onclick="pedirWhatsApp('Bombom no pote de morango', 10.00)">Pedir</button>
+        <button onclick="pedirWhatsApp('Bombom de morango no pote', 10.00)">Pedir</button>
       </div>
     </div>
 
  <!-- produto 5 -->
    <div class="produto">
-      <img src="brownie_morango.jpeg" alt="Ouro Branco">
+      <img src="imagens/brownie_morango.jpeg" alt="Brownie de Ninho e morango">
       <div class="info">
         <h3>Brownie de Ninho e morango</h3>
-        <p>Completar.....</p>
+        <p>Brownie macio, recheado com brigadeiro de Ninho cremoso e finalizado com muitos morangos!</p>
         <strong>R$ 13,00</strong>
         <button onclick="pedirWhatsApp('Brownie de Ninho e morango', 13.00)">Pedir</button>
       </div>
@@ -103,21 +105,21 @@
 
      <!-- produto 6 -->
    <div class="produto">
-      <img src="brownie_maracuja_pote.jpeg" alt="Ouro Branco">
+      <img src="imagens/brownie_maracuja_pote.jpeg" alt="Pote da felicidade de Brownie e Maracujá">
       <div class="info">
         <h3>Pote da felicidade de brownie e maracujá (350g)</h3>
-        <p>Completar......</p>
+        <p>Brigadeiro cremoso de maracujá, brownie macio e finalizado com brigadeiro cremoso ao leite! </p>
         <strong>R$ 18,00</strong>
-        <button onclick="pedirWhatsApp('Pote da felicidade de brownie e maracujá', 18.00)">Pedir</button>
+        <button onclick="pedirWhatsApp('Pote da felicidade de Brownie e Maracujá', 18.00)">Pedir</button>
       </div>
     </div>
 
      <!-- produto 7 -->
    <div class="produto">
-      <img src="pote_felicidade_uva.jpeg" alt="Ouro Branco">
+      <img src="imagens/pote_felicidade_uva.jpeg" alt="Pote da felicidade de uva, ninho e chocolate">
       <div class="info">
         <h3>Pote da felicidade de uva, ninho e chocolate (350g)</h3>
-        <p>Completar......</p>
+        <p>Brigadeiro cremoso de Ninho e chocolate finalizado com uva verde!</p>
         <strong>R$ 16,00</strong>
         <button onclick="pedirWhatsApp('Pote da felicidade de uva, ninho e chocolate', 16.00)">Pedir</button>
       </div>
@@ -125,16 +127,24 @@
     
      <!-- produto 8 -->
    <div class="produto">
-      <img src="caseirinho_cenoura.jpeg" alt="Ouro Branco">
+      <img src="imagens/caseirinho_cenoura.jpeg" alt="Caseirinho de cenoura">
       <div class="info">
-        <h3>Caseirinho de cenoura (450g))</h3>
-        <p>Completar......</p>
+        <h3>Caseirinho de cenoura (450g)</h3>
+        <p>Massa macia e fofinha de cenoura com cobertura de brigadeiro ao leite e finalizado com granulado crocante!</p>
         <strong>R$ 13,50</strong>
         <button onclick="pedirWhatsApp('Caseirinho de cenoura', 13.50)">Pedir</button>
       </div>
     </div>
-
-
+         <!-- produto 9 -->
+   <div class="produto">
+      <img src="imagens/minipudim.jpeg" alt="Mini pudim">
+      <div class="info">
+        <h3>Mini Pudim de leite cremoso (250g)</h3>
+        <p>Pudim cremoso feito com leite condensado, gemas e leite, com textura lisinha e calda dourada no ponto certo.</p>
+        <strong>R$13,00</strong>
+        <button onclick="pedirWhatsApp('Mini pudim de leite cremoso', 13.00)">Pedir</button>
+      </div>
+    </div>
 
   </section>
 
@@ -142,26 +152,100 @@
   <section id="salgados" class="lista">
     <!-- produto 1 -->
     <div class="produto">
-      <img src="coxinha_frango.jpeg" alt="Salgado">
+      <img src="imagens/coxinha_frango.jpeg" alt="Coxinha de frango">
       <div class="info">
         <h3>Coxinha de frango</h3>
-        <p>Recheio especial, massa leve e muuuuito recheio.</p>
+        <p>Coxinha salgada recheada com frango desfiado bem temperado e Catupiry cremoso, envolvida em massa macia e frita na medida certa. Crocante por fora e cremosa por dentro!</p>
         <strong>R$ 8,00</strong>
         <button onclick="pedirWhatsApp('Coxinha de frango', 8.00)">Pedir</button>
       </div>
       <!-- produto 2 -->
     </div>
         <div class="produto">
-      <img src="coxinha.jpeg" alt="Salgado">
+      <img src="imagens/coxinha.jpeg" alt="Coxinha de Camarão">
       <div class="info">
         <h3>Coxinha de camarão</h3>
-        <p>Recheio especial de camarão fresquinhocc, massa leve e muuuuito recheio.</p>
+        <p>Recheio especial de camarão fresquinho, massa leve e muuuuito recheio.</p>
         <strong>R$ 8,00</strong>
         <button onclick="pedirWhatsApp('Coxinha de camarão', 8.00)">Pedir</button>
       </div>
     </div>
 
   </section>
+
+ <!-- BEBIDAS -->
+  <section id="Bebidas" class="lista">
+    <!-- produto 1 -->
+    <div class="produto">
+      <img src="imagens/cocacola.jpg" alt="Mini coca cola">
+      <div class="info">
+        <h3>Coca-Cola Mini</h3>
+        <p>Clássica, geladinha e perfeita para acompanhar qualquer pedido.</p>
+        <strong>R$ 3,00</strong>
+        <button onclick="pedirWhatsApp('Coca-cola mini', 3.00)">Pedir</button>
+      </div>
+      <!-- produto 2 -->
+    </div>
+        <div class="produto">
+      <img src="imagens/frukiguaranamini.png" alt="Mini Fruki Guaraná">
+      <div class="info">
+        <h3>Fruki mini guaraná (200ml)</h3>
+        <p>Clássica, geladinha e perfeita para acompanhar qualquer pedido.</p>
+        <strong>R$ 2,50</strong>
+        <button onclick="pedirWhatsApp('Fruki mini Guaraná', 2.50)">Pedir</button>
+      </div>
+    </div>
+
+  </section>
+
+ <!-- ENCOMENDAS -->
+  <section id="Combos & Encomendas" class="lista">
+    <!-- produto 1 -->
+    <div class="produto">
+      <img src="imagens/caixasalgados.jpeg" alt="Mini coca cola">
+      <div class="info">
+        <h3>Caixa de salgados sortidos (50 unidades)</h3>
+        <p>Salgados sortidos. Confirmar disponibilidade</p>
+        <strong>R$ 45,00</strong>
+        <button onclick="pedirWhatsApp('Caixa de salgados sortidos 50 unidades', 45.00)">Pedir</button>
+      </div>
+
+       <!-- produto 2 -->
+    <div class="produto">
+      <img src="imagens/caixasalgados.jpeg" alt="Mini coca cola">
+      <div class="info">
+        <h3>Caixa de salgados sortidos (100 unidades)</h3>
+        <p>Salgados sortidos. Confirmar disponibilidade</p>
+        <strong>R$ 90,00</strong>
+        <button onclick="pedirWhatsApp('Caixa de salgados sortidos 100 unidades', 100.00)">Pedir</button>
+      </div>
+
+      <!-- produto 3 -->
+    </div>
+        <div class="produtos">
+      <img src="imagens/kitpresenteavelbento.jpeg" alt="Kit presenteavel">
+      <div class="info">
+        <h3>Kit Presenteável: mini bolinho + 6 brigadeiros</h3>
+        <p>Bento cake fofinho, feito com carinho, acompanhado de 6 brigadeiros deliciosos. Ideal para presentear, comemorar ou adoçar o dia de alguém 💖</p>
+        <strong>R$ 30,00</strong>
+        <button onclick="pedirWhatsApp('Kit Presenteável: mini bolinho + 6 brigadeiros', 30.00)">Pedir</button>
+      </div>
+    </div>
+
+        <!-- produto 4 -->
+    </div>
+        <div class="produtos">
+      <img src="imagens/bololimao.jpeg" alt="Bolos e tortas">
+      <div class="info">
+        <h3>Bolos e Tortas</h3>
+        <p>Para consultar valores, recheios e tamanhos, clique no ícone abaixo</p>
+        <strong>R$ Consultar</strong>
+        <button onclick="pedirWhatsApp('Kit Presenteável: mini bolinho + 6 brigadeiros')">Pedir</button>
+      </div>
+    </div>
+
+  </section>
+
 
 </main>
 
